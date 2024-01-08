@@ -1,0 +1,40 @@
+.clock-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+
+    font-size: 20px;
+
+    border: 2px solid black;
+    border-radius: 7px;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+}
+
+.clock-name{
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.clock-time{
+    margin-bottom: 8px;
+}
+
+.bth__delete-clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 23px;
+    height: 23px;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
