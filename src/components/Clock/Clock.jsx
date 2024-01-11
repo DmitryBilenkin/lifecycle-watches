@@ -7,18 +7,20 @@ const [currentTime, setCurrentTime] = useState('loading...')
 
 
 useEffect(()=>{
-    const currTimer = setInterval(() => {   
+  const timeout = setTimeout(() => {
     setCurrentTime(prev => prev = new Date(new Date().getTime() + new Date().getTimezoneOffset()*60000 + props.timeZone*60*60000).toLocaleTimeString())
   }, 1000)
 
   return ()=>{
-      clearInterval(currTimer)  }
-},[])
+    clearTimeout(timeout)
+  }
+},[currentTime])
 
 
 const deleteClockHandler = ()=> {
   props.deleteClock(props.ind)
 }
+
 
   return (
     <div className='clock-container'>

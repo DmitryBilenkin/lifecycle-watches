@@ -14,7 +14,7 @@ function App() {
   }
 
   const deleteClock = (elem) => {
-    setClocksData(clocksData.filter((_,i) => i !== elem))  
+    setClocksData(prev => prev.filter((_,i) => i !== elem))
   }
 
   return (
